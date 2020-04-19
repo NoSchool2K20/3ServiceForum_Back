@@ -1,5 +1,8 @@
 # API Service Forum
 
+Déployé sur Clever Cloud : http://app-e1e82fb1-aa79-4119-8706-574e76dbbf4a.cleverapps.io/
+**Application est actuellement éteinte pour des raisons de coût**
+
 Ce projet s'inscrit dans la démarche du projet NoSchool qui à pour objectif de créer une plateforme de formation qualifiante en informatique à distance.
 Cette partie traite de la partie Back du service Forum (API). 
 Les fonctionnalités sont listés dans les _User Stories_ ci-dessous.
