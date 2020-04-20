@@ -1,0 +1,296 @@
+{
+	"info": {
+		"_postman_id": "8d84a5c0-4308-4951-a4c5-343fb746b4fc",
+		"name": "QSI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "add a message",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"texte\" : \"Ceci est le contenu du message 2fsdfs\",\n\t\"idCours\" : \"ac\",\n\t\"auteur\" : \"5\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/message",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"message"
+					]
+				},
+				"description": "Create a new message"
+			},
+			"response": []
+		},
+		{
+			"name": "remove a message",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"idMessage\" : 214\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/message",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"message"
+					]
+				},
+				"description": "delete a message"
+			},
+			"response": []
+		},
+		{
+			"name": "get messages avec cours inexistant",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "46b20890-a14b-443c-895d-6e4100c242be",
+						"exec": [
+							"pm.test(\"getMessages\", function () {\r",
+							"    var messages = pm.response.json();\r",
+							"    pm.expect(messages.length).to.eq(0);    \r",
+							"  \r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/message?cours=cecoursnexistepas&userId=2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"message"
+					],
+					"query": [
+						{
+							"key": "cours",
+							"value": "cecoursnexistepas"
+						},
+						{
+							"key": "userId",
+							"value": "2"
+						}
+					]
+				},
+				"description": "get messages d'un cours"
+			},
+			"response": []
+		},
+		{
+			"name": "like a message",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"idMessage\" : 10,\n\t\"userId\" : \"1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/like",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"like"
+					]
+				},
+				"description": "like a message"
+			},
+			"response": []
+		},
+		{
+			"name": "unlike a message",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"idMessage\" : 10,\n\t\"userId\" : \"1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/like",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"like"
+					]
+				},
+				"description": "unlike a message"
+			},
+			"response": []
+		},
+		{
+			"name": "get channel",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/channel",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"channel"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get messages cours = ac",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "46b20890-a14b-443c-895d-6e4100c242be",
+						"exec": [
+							"pm.test(\"getMessages\", function () {\r",
+							"    var messages = pm.response.json();\r",
+							"    pm.expect(messages.length).to.eq(1);    \r",
+							"    pm.expect(messages[0].idmessage).to.eq(\"6\");\r",
+							"    pm.expect(messages[0].idcours).to.eq(\"ac\");\r",
+							"    pm.expect(messages[0].isliked).to.eq(\"1\");\r",
+							"    pm.expect(messages[0].nblikes).to.eq(\"2\");    \r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/message?cours=ac&userId=2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"message"
+					],
+					"query": [
+						{
+							"key": "cours",
+							"value": "ac"
+						},
+						{
+							"key": "userId",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
