@@ -11,20 +11,17 @@ Les fonctionnalités sont listés dans les _User Stories_ ci-dessous.
 
 ## User Stories
 
-* Story 1 : En tant qu’ « utilisateur », je peux poster un message sur un channel
+* <u>Story 1 :</u> En tant qu’ « utilisateur », je peux poster un message sur un channel.
 
-* Story 2 : En tant qu’ « utilisateur », je consulter un channel
+* <u>Story 2 :</u> En tant qu’ « utilisateur », je consulter un channel.
 
-* Story 3 : En tant qu’ « utilisateur », je vois les nouveaux messages s’afficher sans avoir à rafraîchir l’affichage
+* <u>Story 3 :</u> En tant qu’ « utilisateur », je vois les nouveaux messages s’afficher sans avoir à rafraîchir l’affichage.
 
-* Story 4 : En tant qu’ « utilisateur », je peux supprimer mes propres messages
+* <u>Story 4 :</u> En tant qu’ « utilisateur », je peux supprimer mes propres messages.
 
-* Story 5 : En tant qu’ « utilisateur », je peux « approuver » un message d’un autre utilisateur, à l’image d’un
-like FB, Twitter ou Reddit.
+* <u>Story 5 :</u> En tant qu’ « utilisateur », je peux « approuver » un message d’un autre utilisateur, à l’image d’un like FB, Twitter ou Reddit.
 
-* Story 6 : En tant qu’ « utilisateur », je peux annuler un de mes « approuver » sur un message d’un autre
-utilisateur, à l’image d’un like FB, Twitter ou Reddit. A noter qu’il s’agit de supprimer un de mes « approuver »
-et non de « désapprouver ».
+* <u>Story 6 :</u> En tant qu’ « utilisateur », je peux annuler un de mes « approuver » sur un message d’un autre utilisateur, à l’image d’un like FB, Twitter ou Reddit. A noter qu’il s’agit de supprimer un de mes « approuver » et non de « désapprouver ».
 
 ## Exécution du projet
 
