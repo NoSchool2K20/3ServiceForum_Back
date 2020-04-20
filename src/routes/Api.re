@@ -33,4 +33,7 @@ App.delete(app, ~path="/message", MessageController.Messages.delete);
 App.post(app, ~path="/like", LikeController.Likes.create);
 App.delete(app, ~path="/like", LikeController.Likes.delete);
 
+App.get(app, ~path="/channel", ChannelController.Channels.getAll);
+
+
 App.useOnPath(app, ~path="*", Controller.badRessource);
