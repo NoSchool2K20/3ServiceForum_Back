@@ -52,12 +52,12 @@ Permet de récupérer le message de bienvenue sur API
 ### **GET** **/channel**
 
 Permet de récupérer l'ensemble des channels en base.
-Exemple d'input : 
+<u>Exemple d'input : </u>
 ```
 http://127.0.0.1:8080/channel
 ```
 
-Exemple d'ouput :
+<u>Exemple d'ouput :</u>
 ```
 [
     {
@@ -73,12 +73,12 @@ Exemple d'ouput :
 ### **GET** **/message?cours=XXX&userId=YYY**
 
 Permet de récupérer l'ensemble des messages pour un cours XXX(idCours) en connaissant l'utilisateur connecté YYY.
-Exemple d'input : 
+<u>Exemple d'input : </u>
 ```
 http://127.0.0.1:8080/message?cours=POO&userId=monUser
 ```
 
-Exemple d'ouput :
+<u>Exemple d'ouput :</u>
 ```
 [
     {
@@ -111,7 +111,7 @@ Permet de créer un message en renseignant les champs suivants dans la méthode 
 * idCours = le nom du cours dans lequel le message se trouve
 * auteur = l'auteur du message 
 
-Exemple d'input : 
+<u>Exemple d'input : </u>
 ```
 {
 	"texte" : "Ceci est le contenu du message",
@@ -124,7 +124,7 @@ Exemple d'input :
 ### **DELETE** **/message**
 
 Permet de supprimer un message avec son idMessage dans la méthode DELETE.
-Exemple d'input : 
+<u>Exemple d'input : </u>
 ```
 {
 	"idMessage" : 214
@@ -134,7 +134,7 @@ Exemple d'input :
 ### **POST** **/like**
 
 Permet de "liker" un message en fournissant son idMessage et le userId de la personne connectée dans la méthode POST.
-Exemple d'input : 
+<u>Exemple d'input : </u>
 ```
 {
 	"idMessage" : 10,
@@ -145,7 +145,7 @@ Exemple d'input :
 ### **DELETE** **/like**
 
 Permet de "disliker" (enlever le like) d'un message en fournissant son idMessage et le userId de la personne connectée dans la méthode DELETE.
-Exemple d'input : 
+<u>Exemple d'input : </u>
 ```
 {
 	"idMessage" : 10,
