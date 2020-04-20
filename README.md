@@ -69,7 +69,8 @@ http://127.0.0.1:8080/channel
         "coursname": "POO"
     }
 ]
-```
+```  
+
 ### **GET** **/message?cours=XXX&userId=YYY**
 
 Permet de récupérer l'ensemble des messages pour un cours XXX(idCours) en connaissant l'utilisateur connecté YYY.
