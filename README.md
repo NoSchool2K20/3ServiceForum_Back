@@ -48,25 +48,68 @@ Le projet permet de générer des réponses JSON en fonction des routes exécut�
 
 Permet de récupérer le message de bienvenue sur API
 
+
+### **GET** **/channel**
+
+Permet de récupérer l'ensemble des channels en base.
+Exemple d'input : 
+```
+http://127.0.0.1:8080/channel
+```
+
 ### **GET** **/message?cours=XXX&userId=YYY**
 
 Permet de récupérer l'ensemble des messages pour un cours XXX(idCours) en connaissant l'utilisateur connecté YYY.
+Exemple d'input : 
+```
+http://127.0.0.1:8080/message?cours=POO&userId=monUser
+```
 
 ### **POST** **/message**
 
 Permet de créer un message en renseignant les champs suivants dans la méthode POST :
 * texte = le texte du message
 * idCours = le nom du cours dans lequel le message se trouve
-* auteur = l'auteur du message
+* auteur = l'auteur du message 
+
+Exemple d'input : 
+```
+{
+	"texte" : "Ceci est le contenu du message",
+	"idCours" : "POO",
+	"auteur" : "monUser"
+}
+```
+
 
 ### **DELETE** **/message**
 
 Permet de supprimer un message avec son idMessage dans la méthode DELETE.
+Exemple d'input : 
+```
+{
+	"idMessage" : 214
+}
+```
 
 ### **POST** **/like**
 
 Permet de "liker" un message en fournissant son idMessage et le userId de la personne connectée dans la méthode POST.
+Exemple d'input : 
+```
+{
+	"idMessage" : 10,
+	"userId" : "monUser"
+}
+```
 
 ### **DELETE** **/like**
 
 Permet de "disliker" (enlever le like) d'un message en fournissant son idMessage et le userId de la personne connectée dans la méthode DELETE.
+Exemple d'input : 
+```
+{
+	"idMessage" : 10,
+	"userId" : "monUser"
+}
+```
