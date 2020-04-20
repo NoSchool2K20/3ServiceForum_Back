@@ -1,7 +1,5 @@
 language: node_js
 
-before_install:
-     - npm install bs-platform
 
 script:     
      - npm install 
