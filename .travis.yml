@@ -1,0 +1,10 @@
+language: node_js
+
+script:
+
+     - npm install bs-platform
+     - npm install 
+     - npm run build
+
+after_success:
+    - echo Fin
