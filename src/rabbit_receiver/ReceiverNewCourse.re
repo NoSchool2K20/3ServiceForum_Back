@@ -26,7 +26,7 @@ Amqp.AmqpConnectionManager.on(
 // Handle an incomming message.
   let onMessage = (channel, msg: Amqp.Queue.message) => {
     let message = msg.content->Node.Buffer.toString->Js.Json.parseExn;
-    let coursValue = {message |> Json.Decode.(field("CourseName", string))};
+    let coursValue = {message |> Json.Decode.(field("courseName", string))};
     let _ = ChannelsRepository.Channels.create(coursValue) ;
     Amqp.Channel.ack(channel, msg);
   };
