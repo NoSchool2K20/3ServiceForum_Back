@@ -8,7 +8,7 @@ script:
 deploy:
   provider: heroku
   api_key:
-     secure: 663bcfe6-1b58-4453-9679-d50680ceda63
+     secure: 6e1bce3b1-64d7-40bf-b2df-2595d5b98fc7
   app: service-forum-back
   on:
     repo: NoSchool2K20/3ServiceForum_Back
