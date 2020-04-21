@@ -9,6 +9,6 @@ deploy:
   provider: heroku
   api_key:
      secure: 663bcfe6-1b58-4453-9679-d50680ceda63
-  app: rails-test-app-article
+  app: service-forum-back
   on:
     repo: NoSchool2K20/3ServiceForum_Back
