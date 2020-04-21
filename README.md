@@ -23,7 +23,7 @@ Les fonctionnalités sont listés dans les _User Stories_ ci-dessous.
 
 * <u>Story 6 :</u> En tant qu’ « utilisateur », je peux annuler un de mes « approuver » sur un message d’un autre utilisateur, à l’image d’un like FB, Twitter ou Reddit. A noter qu’il s’agit de supprimer un de mes « approuver » et non de « désapprouver ».
 
-## Exécution du projet
+## Exécution du projet 
 
 Installer les dépendances du projet dans un dossier node_modules local.
 
