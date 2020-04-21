@@ -4,3 +4,11 @@ language: node_js
 script:     
      - npm install 
      - npm run build
+
+deploy:
+  provider: heroku
+  api_key:
+     secure: KEY
+  app: rails-test-app-article
+  on:
+    repo: NoSchool2K20/3ServiceForum_Back
