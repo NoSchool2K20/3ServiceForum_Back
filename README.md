@@ -28,7 +28,7 @@ Les fonctionnalités sont listés dans les _User Stories_ ci-dessous.
 Installer les dépendances du projet dans un dossier node_modules local.
 
 `npm install`
-
+ 
 Exécuter la construction du projet à partir du package.json.
 
 `npm run build `
