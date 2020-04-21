@@ -1,12 +1,14 @@
 language: node_js
-
-script:     
-     - npm install 
-     - npm run build
+script:
+- npm install
+- npm run build
 deploy:
   provider: heroku
   api_key:
-     secure: KEY
+    secure: KEY
   app: service-forum-back
   on:
     repo: NoSchool2K20/3ServiceForum_Back
+env:
+  global:
+    secure: jKZnPdf1MPPFcN4H1t4DEZTrsT8zkJCUs9gPEHnyfeF2Blxat/1evL7np53p0tV+daWEWKTWcB5DcqlUNa7aRCHiqLawJcUDrM2aGp1e1pLcc0qCaYFLfgrSn8ra3dv6nO91YM43BvcFYIdWw3VNB/75AhIg8UyJoD1HNBYVE9Ohq3eld2RpW4rrijKIbC4d+8FqUKiviKQr1Xu2k7O/qWr3UTA25Fjllto6GNCX/W5ZCBBl8wSc85WMnWzS9IvgpnzW19Yfh4n8yEopKlqF/HdkeZboU4QWPNx0JN7xesrCypQivNPwK1G9GvE0ELbGC8PX2OZYsxocjfFkL0tHo+Ced1fFrF3TVL+zl9GiMbvYVqV3516cO3P0XTyPQldb2ZV93BxzpPMGFkFKrh+4f+R9LvgIbNLSnlSnwzW+DjgMiAvewFrCbxBuofE26vdHIRqKYf3cdBqPCd6Ke0DRxSG2cjWyY6DLg9vphjcXnhX3H6wQ5+QxEOn6Z7nTbF5b809FNmgp7stMi6RauOSwNy1SOmV500kOLHKjedbDBr3FALh+3H+HT0F/E05mdV4QxwqeOifyKwVSQsx7Zja4H1znv7cLlYCOQO6j4o0lfxPqjDFHVOzts6CngVSpVABj4P3WcN2Dj0O5G1XYWIKPL0bHeRU/q3FVXa3wxQ1nIy0=
