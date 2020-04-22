@@ -8,9 +8,8 @@
     "dev": "concurrently -c magenta,cyan \"npm:bsb:watch\" \"npm:server\"",
     "bsb:watch": "bsb -make-world -w -ws _ ",
     "bsb:clean": "bsb -clean-world",
-    "build": "npm run bsb:build",
     "server": "LEVEL=debug nodemon src/index.bs.js",
-    "start": "npm run build && node src/Index.bs.js",
+    "start": "npm run bsb:build && node src/Index.bs.js",
     "db:create": "cat scripts/create_db.sql | sqlite3 ./database/backGesCoursdb.sqlite",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
