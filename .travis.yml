@@ -4,7 +4,7 @@ before_install:
 - npm install -g bs-platform
 script:
 - npm install
-- npm run build
+- npm run bsb:build
 deploy:
   provider: heroku
   api_key:
