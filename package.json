@@ -2,7 +2,7 @@
   "name": "3ServiceForum",
   "version": "1.0.0",
   "description": "Back for gestion of classes",
-  "main": "src/index.bs.js",
+  "main": "src/Index.bs.js",
   "scripts": {
     "bsb:build": "bsb -make-world",
     "dev": "concurrently -c magenta,cyan \"npm:bsb:watch\" \"npm:server\"",
