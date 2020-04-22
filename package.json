@@ -10,7 +10,7 @@
     "bsb:clean": "bsb -clean-world",
     "server": "LEVEL=debug nodemon src/index.bs.js",
     "start": "npm run bsb:build && node src/Index.bs.js",
-    "db:create": "cat scripts/create_db.sql | sqlite3 ./database/backGesCoursdb.sqlite",
+    "db:create": "cat scripts/create_db.sql | sqlite3 ./database/backGesCoursdb.sqlite"
   },
   "author": "",
   "license": "MPL-2.0",
