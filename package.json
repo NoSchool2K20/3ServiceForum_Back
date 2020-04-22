@@ -4,8 +4,8 @@
   "description": "Back for gestion of classes",
   "main": "src/index.bs.js",
   "scripts": {
-    "install" : "npm install -g bs-platform & npm link bs-platform",
     "bsb:build": "bsb -make-world",
+    "heroku-prebuild" : "heroku plugins:install https://github.com/heroku/heroku-deploy",
     "dev": "concurrently -c magenta,cyan \"npm:bsb:watch\" \"npm:server\"",
     "bsb:watch": "bsb -make-world -w -ws _ ",
     "bsb:clean": "bsb -clean-world",
