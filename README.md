@@ -8,7 +8,7 @@ Ce projet s'inscrit dans la démarche du projet NoSchool qui a pour objectif de 
 Cette partie traite de la partie Back du service Forum (API). 
 Les fonctionnalités sont listés dans les _User Stories_ ci-dessous.
 
-
+ 
 ## User Stories
 
 * <u>Story 1 :</u> En tant qu’ « utilisateur », je peux poster un message sur un channel.
