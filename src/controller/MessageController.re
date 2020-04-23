@@ -4,6 +4,7 @@ module Messages = {
 
       let getMessagesByIdCours =
       PromiseMiddleware.from((_next, req, rep) => {
+       Js.Console.info("Dans le getMessage");
        let query = Request.query(req);
         switch (
           query->Js.Dict.get("cours"),
