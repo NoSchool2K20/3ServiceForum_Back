@@ -1,8 +1,6 @@
 language: node_js
 
-before_install:
-- rm -rf node_modules
-- npm install bs-platform
+
 script:
 - npm install
 - npm run bsb:build
