@@ -19,7 +19,7 @@ module Messages = {
                 from forum_messages fm 
                 left join forum_likes fl on fm.idmessage = fl.idmessage 
                 where fm.idcours = ? and fl.auteur = ? 
-                group by fl.idmessage ) res2 on res11.idmessage = res2.idmessage order by dateenvoi asc",
+                group by fl.idmessage ) res2 on res11.idmessage = res2.idmessage order by dateenvoi desc",
               (
                 cours,
                 cours,
