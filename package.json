@@ -10,7 +10,7 @@
     "bsb:clean": "bsb -clean-world",
     "build": "npm run bsb:build",
     "server": "LEVEL=debug nodemon src/index.bs.js",
-    "start": "npm run build & node ./src/Index.bs.js",
+    "start": "npm run build && node src/Index.bs.js",
     "db:create": "cat scripts/create_db.sql | sqlite3 ./database/backGesCoursdb.sqlite",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -33,7 +33,6 @@
   "devDependencies": {
     "bs-platform": "^7.2.2",
     "concurrently": "^5.1.0",
-    "nodemon": "^2.0.2",
-    "bs-express": "^1.0.1"
+    "nodemon": "^2.0.2"
   }
 }
