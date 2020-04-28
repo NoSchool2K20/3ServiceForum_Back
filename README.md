@@ -1,6 +1,6 @@
 # API Service Forum
 
-Déployé sur Clever Cloud : http://app-e1e82fb1-aa79-4119-8706-574e76dbbf4a.cleverapps.io/
+Déployé sur Clever Cloud : https://service-forum.cleverapps.io/
 
 **Application est actuellement éteinte pour des raisons de coût**
 
