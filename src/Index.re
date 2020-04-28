@@ -24,3 +24,5 @@ let onListen = e =>
   };
 
 let server = Express.App.listen(Api.app, ~port=8080, ~onListen, ());
+
+Js.log("C'est parti");
