@@ -2,7 +2,7 @@ version: 2.1
 orbs:
   node: circleci/node@1.1.6
 jobs:
-  build-and-test:
+  build:
     executor:
       name: node/default
     steps:
@@ -10,7 +10,21 @@ jobs:
       - node/with-cache:
           steps:
             - run: npm install
+  deploy:
+    steps:
+      - checkout      
+      - run:
+          name: clever deploy
+          command: |
+            git remote add clever https://$CLEVER_TOKEN:$CLEVER_SECRET@push-par-clevercloud-customers.services.clever-cloud.com/$CLEVER_APP_ID.git
+            git push -u clever master
 workflows:
-    build-and-test:
+    build:
       jobs:
-        - build-and-test
+        - build
+        - deploy:
+          requires:
+            - build
+          filters:
+            branches:
+              only: master
