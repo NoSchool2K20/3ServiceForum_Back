@@ -9,7 +9,7 @@ module Messages = {
               "select res11.idmessage, texte, dateenvoi, idcours, auteur::text, nblikes::integer, coalesce(isliked,0)::integer as isliked from (
                 select idmessage, texte, dateenvoi, idcours, auteur, coalesce(count(idmessageLike),0) as nblikes
                 from (
-                select fm.idmessage, texte,  TO_CHAR(dateenvoi,'DD/MM/YYYY HH24:MI:SS') as dateenvoi, idcours, fm.auteur, fl.idmessage as idmessageLike, coalesce(fl.auteur,0) as auteurLike
+                select fm.idmessage, texte,  TO_CHAR(dateenvoi,'DD/MM/YYYY HH24:MI:SS') as dateenvoi, idcours, fm.auteur, fl.idmessage as idmessageLike, coalesce(fl.auteur,'0') as auteurLike
                 from forum_messages fm
                 left join forum_likes fl on fm.idmessage = fl.idmessage 
                 where fm.idcours = ? ) res1
