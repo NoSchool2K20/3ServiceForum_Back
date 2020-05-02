@@ -23,6 +23,7 @@ module Channels = {
     Js.Promise.(
       Dbconnexion.knex
       |> Knex.fromTable("forum_channels")
+      |> Knex.orderBy("id")
       |> Knex.toPromise
       |> then_(results => {
         Channels.Channelslist.fromJson(results)

@@ -50,3 +50,5 @@ insert into FORUM_LIKES (idmessage, auteur) values (8, 'Tommy');
 insert into FORUM_LIKES (idmessage, auteur) values (6, 'Tommy');
 insert into FORUM_LIKES (idmessage, auteur) values (0, 'Auteur de test bis');
 insert into FORUM_LIKES (idmessage, auteur) values (0, 'Auteur de test');
+
+insert into forum_channels (id, coursname) values (0, '0- Channel de test');
