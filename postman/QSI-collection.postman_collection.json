@@ -1,0 +1,113 @@
+{
+	"info": {
+		"_postman_id": "628127e4-9905-47db-9b18-8072ede15048",
+		"name": "QSI-collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://service-forum.cleverapps.io/message?cours=Cours de test&userId=Auteur de test",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9e971177-347c-482a-9bec-4aaf7caa5117",
+						"exec": [
+							"pm.test(\"getMessages\", function () {\r",
+							"    var messages = pm.response.json();\r",
+							"    pm.expect(messages.length).to.eq(2);    \r",
+							"    pm.expect(messages[0].idmessage).to.eq(\"-1\");\r",
+							"    pm.expect(messages[0].idcours).to.eq(\"Cours de test\");\r",
+							"    pm.expect(messages[0].isliked).to.eq(\"0\");\r",
+							"    pm.expect(messages[0].nblikes).to.eq(\"0\");    \r",
+							"    pm.expect(messages[1].idmessage).to.eq(\"0\");\r",
+							"    pm.expect(messages[1].idcours).to.eq(\"Cours de test\");\r",
+							"    pm.expect(messages[1].isliked).to.eq(\"1\");\r",
+							"    pm.expect(messages[1].nblikes).to.eq(\"2\");   \r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://service-forum.cleverapps.io/message?cours=Cours de test&userId=Auteur de test",
+					"protocol": "https",
+					"host": [
+						"service-forum",
+						"cleverapps",
+						"io"
+					],
+					"path": [
+						"message"
+					],
+					"query": [
+						{
+							"key": "cours",
+							"value": "Cours de test"
+						},
+						{
+							"key": "userId",
+							"value": "Auteur de test"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get channel",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c062c157-5df2-46f9-bd97-9c14b8e94d5a",
+						"exec": [
+							"pm.test(\"getMessages\", function () {\r",
+							"    var messages = pm.response.json();\r",
+							"    pm.expect(messages[0].id).to.eq(\"0\");\r",
+							"    pm.expect(messages[0].coursname).to.eq(\"0- Channel de test\");\r",
+							"\r",
+							" \r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://service-forum.cleverapps.io/channel",
+					"protocol": "https",
+					"host": [
+						"service-forum",
+						"cleverapps",
+						"io"
+					],
+					"path": [
+						"channel"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

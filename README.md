@@ -51,7 +51,7 @@ Permet de récupérer le message de bienvenue sur API
 Permet de récupérer l'ensemble des channels en base.
 <u>Exemple d'input : </u>
 ```
-http://127.0.0.1:8080/channel
+https://service-forum.cleverapps.io/channel
 ```
 
 <u>Exemple d'ouput :</u>
@@ -73,7 +73,7 @@ http://127.0.0.1:8080/channel
 Permet de récupérer l'ensemble des messages pour un cours XXX(idCours) en connaissant l'utilisateur connecté YYY.
 <u>Exemple d'input : </u>
 ```
-http://127.0.0.1:8080/message?cours=POO&userId=monUser
+https://service-forum.cleverapps.io/message?cours=POO&userId=monUser
 ```
 
 <u>Exemple d'ouput :</u>
