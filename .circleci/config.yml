@@ -1,6 +1,7 @@
 version: 2.1
 orbs:
   node: circleci/node@1.1.6
+  newman: postman/newman@0.0.2
 jobs:
   build:
     executor:
