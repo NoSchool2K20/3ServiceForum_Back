@@ -10,6 +10,12 @@ jobs:
       - node/with-cache:
           steps:
             - run: npm install
+  newman-collection-test:
+    executor: newman/postman-newman-docker
+    steps:
+      - checkout
+      - newman/newman-run:
+          collection: ./postman/service_forum.postman_collection.json
   deploy:
     executor:
       name: node/default
@@ -21,12 +27,15 @@ jobs:
             git remote add clever https://$CLEVER_TOKEN:$CLEVER_SECRET@push-par-clevercloud-customers.services.clever-cloud.com/app_264ddab9-51db-4d67-bce6-bce873520b60.git
             git push -u clever master
 workflows:
-    build_and_deploy:
+    build_test_deploy:
       jobs:
         - build
-        - deploy:
+        - newman-collection-test:
             requires:
               - build
+        - deploy:
+            requires:
+              - newman-collection-test
             filters:
               branches:
                 only: master
