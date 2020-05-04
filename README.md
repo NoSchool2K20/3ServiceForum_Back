@@ -75,7 +75,7 @@ Permet de récupérer l'ensemble des messages pour un cours XXX(idCours) en conn
 ```
 https://service-forum.cleverapps.io/message?cours=POO&userId=monUser
 ```
-
+  
 <u>Exemple d'ouput :</u>
 ```
 [
