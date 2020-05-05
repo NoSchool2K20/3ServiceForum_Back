@@ -25,7 +25,7 @@ Les fonctionnalités sont listés dans les _User Stories_ ci-dessous.
  
 ## Exécution du projet 
 
-Installer les dépendances du projet dans un dossier node_modules local.
+Installer les dépendances du projet dans un dossier node_modules local. 
 
 `npm install`
  
