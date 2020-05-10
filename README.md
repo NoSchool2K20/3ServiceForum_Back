@@ -37,7 +37,7 @@ Exécuter le lanceur du projet défini dans le package.json
 
 `npm start`
 
-## Routes de l'API
+## Routes de l'API 
 
 Le projet permet de générer des réponses JSON en fonction des routes exécutées.
 
