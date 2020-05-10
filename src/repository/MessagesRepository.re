@@ -50,7 +50,7 @@ module Messages = {
 
 
       let deleteMessage = (idMessage) => {
-        let messages = Messages.Messages.make(idMessage, "texte", Js.Date.toISOString(Js.Date.make()), "idCours", "auteur",0);
+        let messages = Messages.Messages.make(idMessage, "texte", Js.Date.toISOString(Js.Date.make()), "idCours", "auteur");
         ignore(LikesRepository.Likes.deleteAllLikesOfAMessage(idMessage));
         Js.Promise.(
           Dbconnexion.knex
@@ -66,43 +66,9 @@ module Messages = {
       };
   
   
-
-
-      /*
-  let decodeInt = json =>
-      switch (Js.Json.classify(json)) {
-        | Js.Json.JSONNumber(float) => Ok(int_of_float(float))
-        | _ => Error("Not an int")
-    };
-
-  let handleValue =
-  Js.Promise.then_(
-    (result) =>
-      Js.Promise.resolve(
-        switch result {
-        | Ok(value) => value
-        | Error(reason) => -1
-        }
-      )
-  );
-
-
-      
-  let getNextIdInBase = ()  =>
-  Js.Promise.(
-    Dbconnexion.knex
-    |> Knex.raw("select max(idMessage) as value from forum_messages")
-    |> then_(json => {
-                 let myInt = decodeInt(json); 
-                 /* do something with myInt*/
-                 resolve();/* ici ça retourne Promise(unit) mais tu peux retourner n'importe quelle Promise('a) selon le type attendu en retour */
-                 })
-  );
-
-*/
-  
+ 
   let create = ( texte, idCours, auteur) => {
-      let messages = Messages.Messages.make(0, texte, Js.Date.toISOString(Js.Date.make()), idCours, auteur,0);
+      let messages = Messages.Messages.make(0, texte, Js.Date.toISOString(Js.Date.make()), idCours, auteur);
       Js.Promise.(
         Dbconnexion.knex
         |> Knex.rawBinding(
